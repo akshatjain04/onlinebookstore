@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ResponseCode.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">onlinebookstore</a> &gt; <a href="index.source.html" class="el_package">com.bittercode.constant</a> &gt; <span class="el_source">ResponseCode.java</span></div><h1>ResponseCode.java</h1><pre class="source lang-java linenums">package com.bittercode.constant;
+
+import java.util.Arrays;
+import java.util.Optional;
+
+<span class="nc" id="L6">public enum ResponseCode {</span>
+
+<span class="nc" id="L8">	SUCCESS(200, &quot;OK&quot;), FAILURE(422, &quot;Unprocessible Entity, Failed to Process&quot;),</span>
+<span class="nc" id="L9">	PAGE_NOT_FOUND(404, &quot;The Page You are Searching For is Not available&quot;),</span>
+<span class="nc" id="L10">	ACCESS_DENIED(403, &quot;Please Login First to continue&quot;), BAD_REQUEST(400, &quot;Bad Request, Please Try Again&quot;),</span>
+<span class="nc" id="L11">	INTERNAL_SERVER_ERROR(500, &quot;Internal Server Error, Try Again!!&quot;),</span>
+<span class="nc" id="L12">	DATABASE_CONNECTION_FAILURE(406,</span>
+			&quot;Unable to Connect to DB, Please Check your db credentials in application.properties&quot;),
+<span class="nc" id="L14">	METHOD_NOT_ALLOWED(405, &quot;Requested HTTP method is not supported by this URL&quot;),</span>
+
+	;
+
+	private final String message;
+
+	private final int code;
+
+<span class="nc" id="L22">	ResponseCode(int code, String message) {</span>
+<span class="nc" id="L23">		this.message = message;</span>
+<span class="nc" id="L24">		this.code = code;</span>
+<span class="nc" id="L25">	}</span>
+
+	public String getMessage() {
+<span class="nc" id="L28">		return message;</span>
+	}
+
+	public int getCode() {
+<span class="nc" id="L32">		return code;</span>
+	}
+
+	// Reverse lookup methods
+	public static Optional&lt;ResponseCode&gt; getMessageByStatusCode(int statusCode) {
+<span class="nc bnc" id="L37" title="All 2 branches missed.">		return Arrays.stream(ResponseCode.values()).filter(error -&gt; error.getCode() == statusCode).findFirst();</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

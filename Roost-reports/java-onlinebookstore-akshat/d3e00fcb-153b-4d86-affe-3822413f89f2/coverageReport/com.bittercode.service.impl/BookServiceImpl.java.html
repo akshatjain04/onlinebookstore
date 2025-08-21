@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BookServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">onlinebookstore</a> &gt; <a href="index.source.html" class="el_package">com.bittercode.service.impl</a> &gt; <span class="el_source">BookServiceImpl.java</span></div><h1>BookServiceImpl.java</h1><pre class="source lang-java linenums">package com.bittercode.service.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.bittercode.constant.ResponseCode;
+import com.bittercode.constant.db.BooksDBConstants;
+import com.bittercode.model.Book;
+import com.bittercode.model.StoreException;
+import com.bittercode.service.BookService;
+import com.bittercode.util.DBUtil;
+
+<span class="nc" id="L17">public class BookServiceImpl implements BookService {</span>
+
+	private static final String getAllBooksQuery = &quot;SELECT * FROM &quot; + BooksDBConstants.TABLE_BOOK;
+
+	private static final String getBookByIdQuery = &quot;SELECT * FROM &quot; + BooksDBConstants.TABLE_BOOK + &quot; WHERE &quot;
+			+ BooksDBConstants.COLUMN_BARCODE + &quot; = ?&quot;;
+
+	private static final String deleteBookByIdQuery = &quot;DELETE FROM &quot; + BooksDBConstants.TABLE_BOOK + &quot;  WHERE &quot;
+			+ BooksDBConstants.COLUMN_BARCODE + &quot;=?&quot;;
+
+	private static final String addBookQuery = &quot;INSERT INTO &quot; + BooksDBConstants.TABLE_BOOK + &quot;  VALUES(?,?,?,?,?)&quot;;
+
+	private static final String updateBookQtyByIdQuery = &quot;UPDATE &quot; + BooksDBConstants.TABLE_BOOK + &quot; SET &quot;
+			+ BooksDBConstants.COLUMN_QUANTITY + &quot;=? WHERE &quot; + BooksDBConstants.COLUMN_BARCODE + &quot;=?&quot;;
+
+	private static final String updateBookByIdQuery = &quot;UPDATE &quot; + BooksDBConstants.TABLE_BOOK + &quot; SET &quot;
+			+ BooksDBConstants.COLUMN_NAME + &quot;=? , &quot; + BooksDBConstants.COLUMN_AUTHOR + &quot;=?, &quot;
+			+ BooksDBConstants.COLUMN_PRICE + &quot;=?, &quot; + BooksDBConstants.COLUMN_QUANTITY + &quot;=? &quot; + &quot;  WHERE &quot;
+			+ BooksDBConstants.COLUMN_BARCODE + &quot;=?&quot;;
+
+	@Override
+	public Book getBookById(String bookId) throws StoreException {
+<span class="nc" id="L39">		Book book = null;</span>
+<span class="nc" id="L40">		Connection con = DBUtil.getConnection();</span>
+		try {
+<span class="nc" id="L42">			PreparedStatement ps = con.prepareStatement(getBookByIdQuery);</span>
+<span class="nc" id="L43">			ps.setString(1, bookId);</span>
+<span class="nc" id="L44">			ResultSet rs = ps.executeQuery();</span>
+
+<span class="nc bnc" id="L46" title="All 2 branches missed.">			while (rs.next()) {</span>
+<span class="nc" id="L47">				String bCode = rs.getString(1);</span>
+<span class="nc" id="L48">				String bName = rs.getString(2);</span>
+<span class="nc" id="L49">				String bAuthor = rs.getString(3);</span>
+<span class="nc" id="L50">				int bPrice = rs.getInt(4);</span>
+<span class="nc" id="L51">				int bQty = rs.getInt(5);</span>
+
+<span class="nc" id="L53">				book = new Book(bCode, bName, bAuthor, bPrice, bQty);</span>
+<span class="nc" id="L54">			}</span>
+		}
+<span class="nc" id="L56">		catch (SQLException e) {</span>
+
+<span class="nc" id="L58">		}</span>
+<span class="nc" id="L59">		return book;</span>
+	}
+
+	@Override
+	public List&lt;Book&gt; getAllBooks() throws StoreException {
+<span class="nc" id="L64">		List&lt;Book&gt; books = new ArrayList&lt;Book&gt;();</span>
+<span class="nc" id="L65">		Connection con = DBUtil.getConnection();</span>
+
+		try {
+<span class="nc" id="L68">			PreparedStatement ps = con.prepareStatement(getAllBooksQuery);</span>
+<span class="nc" id="L69">			ResultSet rs = ps.executeQuery();</span>
+
+<span class="nc bnc" id="L71" title="All 2 branches missed.">			while (rs.next()) {</span>
+<span class="nc" id="L72">				String bCode = rs.getString(1);</span>
+<span class="nc" id="L73">				String bName = rs.getString(2);</span>
+<span class="nc" id="L74">				String bAuthor = rs.getString(3);</span>
+<span class="nc" id="L75">				int bPrice = rs.getInt(4);</span>
+<span class="nc" id="L76">				int bQty = rs.getInt(5);</span>
+
+<span class="nc" id="L78">				Book book = new Book(bCode, bName, bAuthor, bPrice, bQty);</span>
+<span class="nc" id="L79">				books.add(book);</span>
+<span class="nc" id="L80">			}</span>
+		}
+<span class="nc" id="L82">		catch (SQLException e) {</span>
+
+<span class="nc" id="L84">		}</span>
+<span class="nc" id="L85">		return books;</span>
+	}
+
+	@Override
+	public String deleteBookById(String bookId) throws StoreException {
+<span class="nc" id="L90">		String response = ResponseCode.FAILURE.name();</span>
+<span class="nc" id="L91">		Connection con = DBUtil.getConnection();</span>
+		try {
+<span class="nc" id="L93">			PreparedStatement ps = con.prepareStatement(deleteBookByIdQuery);</span>
+<span class="nc" id="L94">			ps.setString(1, bookId);</span>
+<span class="nc" id="L95">			int k = ps.executeUpdate();</span>
+<span class="nc bnc" id="L96" title="All 2 branches missed.">			if (k == 1) {</span>
+<span class="nc" id="L97">				response = ResponseCode.SUCCESS.name();</span>
+			}
+		}
+<span class="nc" id="L100">		catch (Exception e) {</span>
+<span class="nc" id="L101">			response += &quot; : &quot; + e.getMessage();</span>
+<span class="nc" id="L102">			e.printStackTrace();</span>
+<span class="nc" id="L103">		}</span>
+<span class="nc" id="L104">		return response;</span>
+	}
+
+	@Override
+	public String addBook(Book book) throws StoreException {
+<span class="nc" id="L109">		String responseCode = ResponseCode.FAILURE.name();</span>
+<span class="nc" id="L110">		Connection con = DBUtil.getConnection();</span>
+		try {
+<span class="nc" id="L112">			PreparedStatement ps = con.prepareStatement(addBookQuery);</span>
+<span class="nc" id="L113">			ps.setString(1, book.getBarcode());</span>
+<span class="nc" id="L114">			ps.setString(2, book.getName());</span>
+<span class="nc" id="L115">			ps.setString(3, book.getAuthor());</span>
+<span class="nc" id="L116">			ps.setDouble(4, book.getPrice());</span>
+<span class="nc" id="L117">			ps.setInt(5, book.getQuantity());</span>
+<span class="nc" id="L118">			int k = ps.executeUpdate();</span>
+<span class="nc bnc" id="L119" title="All 2 branches missed.">			if (k == 1) {</span>
+<span class="nc" id="L120">				responseCode = ResponseCode.SUCCESS.name();</span>
+			}
+		}
+<span class="nc" id="L123">		catch (Exception e) {</span>
+<span class="nc" id="L124">			responseCode += &quot; : &quot; + e.getMessage();</span>
+<span class="nc" id="L125">			e.printStackTrace();</span>
+<span class="nc" id="L126">		}</span>
+<span class="nc" id="L127">		return responseCode;</span>
+	}
+
+	@Override
+	public String updateBookQtyById(String bookId, int quantity) throws StoreException {
+<span class="nc" id="L132">		String responseCode = ResponseCode.FAILURE.name();</span>
+<span class="nc" id="L133">		Connection con = DBUtil.getConnection();</span>
+		try {
+<span class="nc" id="L135">			PreparedStatement ps = con.prepareStatement(updateBookQtyByIdQuery);</span>
+<span class="nc" id="L136">			ps.setInt(1, quantity);</span>
+<span class="nc" id="L137">			ps.setString(2, bookId);</span>
+<span class="nc" id="L138">			ps.executeUpdate();</span>
+<span class="nc" id="L139">			responseCode = ResponseCode.SUCCESS.name();</span>
+		}
+<span class="nc" id="L141">		catch (Exception e) {</span>
+<span class="nc" id="L142">			responseCode += &quot; : &quot; + e.getMessage();</span>
+<span class="nc" id="L143">			e.printStackTrace();</span>
+<span class="nc" id="L144">		}</span>
+<span class="nc" id="L145">		return responseCode;</span>
+	}
+
+	@Override
+	public List&lt;Book&gt; getBooksByCommaSeperatedBookIds(String commaSeperatedBookIds) throws StoreException {
+<span class="nc" id="L150">		List&lt;Book&gt; books = new ArrayList&lt;Book&gt;();</span>
+<span class="nc" id="L151">		Connection con = DBUtil.getConnection();</span>
+		try {
+<span class="nc" id="L153">			String getBooksByCommaSeperatedBookIdsQuery = &quot;SELECT * FROM &quot; + BooksDBConstants.TABLE_BOOK + &quot; WHERE &quot;</span>
+					+ BooksDBConstants.COLUMN_BARCODE + &quot; IN ( &quot; + commaSeperatedBookIds + &quot; )&quot;;
+<span class="nc" id="L155">			PreparedStatement ps = con.prepareStatement(getBooksByCommaSeperatedBookIdsQuery);</span>
+<span class="nc" id="L156">			ResultSet rs = ps.executeQuery();</span>
+
+<span class="nc bnc" id="L158" title="All 2 branches missed.">			while (rs.next()) {</span>
+<span class="nc" id="L159">				String bCode = rs.getString(1);</span>
+<span class="nc" id="L160">				String bName = rs.getString(2);</span>
+<span class="nc" id="L161">				String bAuthor = rs.getString(3);</span>
+<span class="nc" id="L162">				int bPrice = rs.getInt(4);</span>
+<span class="nc" id="L163">				int bQty = rs.getInt(5);</span>
+
+<span class="nc" id="L165">				Book book = new Book(bCode, bName, bAuthor, bPrice, bQty);</span>
+<span class="nc" id="L166">				books.add(book);</span>
+<span class="nc" id="L167">			}</span>
+		}
+<span class="nc" id="L169">		catch (SQLException e) {</span>
+
+<span class="nc" id="L171">		}</span>
+<span class="nc" id="L172">		return books;</span>
+	}
+
+	@Override
+	public String updateBook(Book book) throws StoreException {
+<span class="nc" id="L177">		String responseCode = ResponseCode.FAILURE.name();</span>
+<span class="nc" id="L178">		Connection con = DBUtil.getConnection();</span>
+		try {
+<span class="nc" id="L180">			PreparedStatement ps = con.prepareStatement(updateBookByIdQuery);</span>
+<span class="nc" id="L181">			ps.setString(1, book.getName());</span>
+<span class="nc" id="L182">			ps.setString(2, book.getAuthor());</span>
+<span class="nc" id="L183">			ps.setDouble(3, book.getPrice());</span>
+<span class="nc" id="L184">			ps.setInt(4, book.getQuantity());</span>
+<span class="nc" id="L185">			ps.setString(5, book.getBarcode());</span>
+<span class="nc" id="L186">			ps.executeUpdate();</span>
+<span class="nc" id="L187">			responseCode = ResponseCode.SUCCESS.name();</span>
+		}
+<span class="nc" id="L189">		catch (Exception e) {</span>
+<span class="nc" id="L190">			responseCode += &quot; : &quot; + e.getMessage();</span>
+<span class="nc" id="L191">			e.printStackTrace();</span>
+<span class="nc" id="L192">		}</span>
+<span class="nc" id="L193">		return responseCode;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
