@@ -1,5 +1,3 @@
-//This test file is marked invalid as it contains compilation errors. Change the extension to of this file to .java, to manually edit its contents
-
 
 // ********RoostGPT********
 /*
@@ -138,6 +136,8 @@ Validation:
   Clarify what the assertion aims to verify and the reason behind the expected result.
   Elaborate on the significance of the test in the context of application behavior or business logic.
 
+
+roost_feedback [21/08/2025, 5:55:22 AM]:Modify\sCode\sto\sfix\sthis\serror\n[166,58]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\svariable\sgetAllBooksQuery\n[ERROR]\s\s\slocation:\sinterface\scom.bittercode.constant.db.BooksDBConstants\n[177,46]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookCode()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[177,80]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookCode()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[178,46]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookName()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[178,80]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookName()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[188,58]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\svariable\sgetAllBooksQuery\n[ERROR]\s\s\slocation:\sinterface\scom.bittercode.constant.db.BooksDBConstants\n[198,58]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\svariable\sgetAllBooksQuery\n[ERROR]\s\s\slocation:\sinterface\scom.bittercode.constant.db.BooksDBConstants\n[208,58]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\svariable\sgetAllBooksQuery\n[ERROR]\s\s\slocation:\sinterface\scom.bittercode.constant.db.BooksDBConstants\n[219,46]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookCode()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[219,80]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookCode()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[220,46]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookName()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[220,80]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookName()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[234,58]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\svariable\sgetAllBooksQuery\n[ERROR]\s\s\slocation:\sinterface\scom.bittercode.constant.db.BooksDBConstants\n[245,46]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookCode()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[245,80]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookCode()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[246,46]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookName()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[246,80]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookName()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[259,58]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\svariable\sgetAllBooksQuery\n[ERROR]\s\s\slocation:\sinterface\scom.bittercode.constant.db.BooksDBConstants\n[270,46]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookCode()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[270,80]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookCode()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[271,46]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookName()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[271,80]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookName()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[284,58]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\svariable\sgetAllBooksQuery\n[ERROR]\s\s\slocation:\sinterface\scom.bittercode.constant.db.BooksDBConstants\n[295,46]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookCode()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[295,80]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookCode()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[296,46]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookName()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[296,80]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookName()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[309,58]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\svariable\sgetAllBooksQuery\n[ERROR]\s\s\slocation:\sinterface\scom.bittercode.constant.db.BooksDBConstants\n[320,46]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookCode()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[320,80]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookCode()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[321,46]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookName()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[321,80]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookName()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[334,58]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\svariable\sgetAllBooksQuery\n[ERROR]\s\s\slocation:\sinterface\scom.bittercode.constant.db.BooksDBConstants\n[345,46]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookCode()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[345,80]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookCode()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[346,46]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookName()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[346,80]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookName()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[359,58]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\svariable\sgetAllBooksQuery\n[ERROR]\s\s\slocation:\sinterface\scom.bittercode.constant.db.BooksDBConstants\n[370,46]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookCode()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[370,80]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookCode()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[371,46]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookName()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book\n[371,80]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sgetBookName()\n[ERROR]\s\s\slocation:\sclass\scom.bittercode.model.Book
 */
 
 // ********RoostGPT********
@@ -187,14 +187,14 @@ public class BookServiceImplGetAllBooksTest {
         expectedBooks.add(new Book("B001", "Book1", "Author1", 100, 5));
         expectedBooks.add(new Book("B002", "Book2", "Author2", 200, 10));
         when(dbUtil.getConnection()).thenReturn(connection);
-        when(connection.prepareStatement(BooksDBConstants.getAllBooksQuery)).thenReturn(preparedStatement);
+        when(connection.prepareStatement(BooksDBConstants.GET_ALL_BOOKS_QUERY)).thenReturn(preparedStatement);
         when(preparedStatement.executeQuery()).thenReturn(resultSet);
         when(resultSet.next()).thenReturn(true, true, false);
-        when(resultSet.getString(1)).thenReturn("B001", "B002");
-        when(resultSet.getString(2)).thenReturn("Book1", "Book2");
-        when(resultSet.getString(3)).thenReturn("Author1", "Author2");
-        when(resultSet.getInt(4)).thenReturn(100, 200);
-        when(resultSet.getInt(5)).thenReturn(5, 10);
+        when(resultSet.getString("book_code")).thenReturn("B001", "B002");
+        when(resultSet.getString("book_name")).thenReturn("Book1", "Book2");
+        when(resultSet.getString("author")).thenReturn("Author1", "Author2");
+        when(resultSet.getInt("price")).thenReturn(100, 200);
+        when(resultSet.getInt("quantity")).thenReturn(5, 10);
         List<Book> actualBooks = bookService.getAllBooks();
         assertEquals(expectedBooks.size(), actualBooks.size());
         for (int i = 0; i < expectedBooks.size(); i++) {
@@ -209,7 +209,7 @@ public class BookServiceImplGetAllBooksTest {
     @Tag("valid")
     public void testGetAllBooksEmptyDatabase() throws SQLException, StoreException {
         when(dbUtil.getConnection()).thenReturn(connection);
-        when(connection.prepareStatement(BooksDBConstants.getAllBooksQuery)).thenReturn(preparedStatement);
+        when(connection.prepareStatement(BooksDBConstants.GET_ALL_BOOKS_QUERY)).thenReturn(preparedStatement);
         when(preparedStatement.executeQuery()).thenReturn(resultSet);
         when(resultSet.next()).thenReturn(false);
         List<Book> actualBooks = bookService.getAllBooks();
@@ -219,7 +219,7 @@ public class BookServiceImplGetAllBooksTest {
     @Tag("invalid")
     public void testGetAllBooksSQLException() throws SQLException, StoreException {
         when(dbUtil.getConnection()).thenReturn(connection);
-        when(connection.prepareStatement(BooksDBConstants.getAllBooksQuery)).thenThrow(new SQLException());
+        when(connection.prepareStatement(BooksDBConstants.GET_ALL_BOOKS_QUERY)).thenThrow(new SQLException());
         assertThrows(StoreException.class, () -> bookService.getAllBooks());
     }
     @Test
@@ -229,14 +229,14 @@ public class BookServiceImplGetAllBooksTest {
         expectedBooks.add(new Book("B001", "Book@1", "Author1", 100, 5));
         expectedBooks.add(new Book("B002", "Book#2", "Author2", 200, 10));
         when(dbUtil.getConnection()).thenReturn(connection);
-        when(connection.prepareStatement(BooksDBConstants.getAllBooksQuery)).thenReturn(preparedStatement);
+        when(connection.prepareStatement(BooksDBConstants.GET_ALL_BOOKS_QUERY)).thenReturn(preparedStatement);
         when(preparedStatement.executeQuery()).thenReturn(resultSet);
         when(resultSet.next()).thenReturn(true, true, false);
-        when(resultSet.getString(1)).thenReturn("B001", "B002");
-        when(resultSet.getString(2)).thenReturn("Book@1", "Book#2");
-        when(resultSet.getString(3)).thenReturn("Author1", "Author2");
-        when(resultSet.getInt(4)).thenReturn(100, 200);
-        when(resultSet.getInt(5)).thenReturn(5, 10);
+        when(resultSet.getString("book_code")).thenReturn("B001", "B002");
+        when(resultSet.getString("book_name")).thenReturn("Book@1", "Book#2");
+        when(resultSet.getString("author")).thenReturn("Author1", "Author2");
+        when(resultSet.getInt("price")).thenReturn(100, 200);
+        when(resultSet.getInt("quantity")).thenReturn(5, 10);
         List<Book> actualBooks = bookService.getAllBooks();
         assertEquals(expectedBooks.size(), actualBooks.size());
         for (int i = 0; i < expectedBooks.size(); i++) {
@@ -255,14 +255,14 @@ public class BookServiceImplGetAllBooksTest {
             expectedBooks.add(new Book("B" + i, "Book" + i, "Author" + i, 100 + i, 5 + i));
         }
         when(dbUtil.getConnection()).thenReturn(connection);
-        when(connection.prepareStatement(BooksDBConstants.getAllBooksQuery)).thenReturn(preparedStatement);
+        when(connection.prepareStatement(BooksDBConstants.GET_ALL_BOOKS_QUERY)).thenReturn(preparedStatement);
         when(preparedStatement.executeQuery()).thenReturn(resultSet);
         when(resultSet.next()).thenReturn(true, true, false);
-        when(resultSet.getString(1)).thenReturn("B0", "B1");
-        when(resultSet.getString(2)).thenReturn("Book0", "Book1");
-        when(resultSet.getString(3)).thenReturn("Author0", "Author1");
-        when(resultSet.getInt(4)).thenReturn(100, 101);
-        when(resultSet.getInt(5)).thenReturn(5, 6);
+        when(resultSet.getString("book_code")).thenReturn("B0", "B1");
+        when(resultSet.getString("book_name")).thenReturn("Book0", "Book1");
+        when(resultSet.getString("author")).thenReturn("Author0", "Author1");
+        when(resultSet.getInt("price")).thenReturn(100, 101);
+        when(resultSet.getInt("quantity")).thenReturn(5, 6);
         List<Book> actualBooks = bookService.getAllBooks();
         assertEquals(expectedBooks.size(), actualBooks.size());
         for (int i = 0; i < expectedBooks.size(); i++) {
@@ -280,14 +280,14 @@ public class BookServiceImplGetAllBooksTest {
         expectedBooks.add(new Book("B001", "Book1", null, 100, 5));
         expectedBooks.add(new Book("B002", null, "Author2", 200, 10));
         when(dbUtil.getConnection()).thenReturn(connection);
-        when(connection.prepareStatement(BooksDBConstants.getAllBooksQuery)).thenReturn(preparedStatement);
+        when(connection.prepareStatement(BooksDBConstants.GET_ALL_BOOKS_QUERY)).thenReturn(preparedStatement);
         when(preparedStatement.executeQuery()).thenReturn(resultSet);
         when(resultSet.next()).thenReturn(true, true, false);
-        when(resultSet.getString(1)).thenReturn("B001", "B002");
-        when(resultSet.getString(2)).thenReturn("Book1", null);
-        when(resultSet.getString(3)).thenReturn(null, "Author2");
-        when(resultSet.getInt(4)).thenReturn(100, 200);
-        when(resultSet.getInt(5)).thenReturn(5, 10);
+        when(resultSet.getString("book_code")).thenReturn("B001", "B002");
+        when(resultSet.getString("book_name")).thenReturn("Book1", null);
+        when(resultSet.getString("author")).thenReturn(null, "Author2");
+        when(resultSet.getInt("price")).thenReturn(100, 200);
+        when(resultSet.getInt("quantity")).thenReturn(5, 10);
         List<Book> actualBooks = bookService.getAllBooks();
         assertEquals(expectedBooks.size(), actualBooks.size());
         for (int i = 0; i < expectedBooks.size(); i++) {
@@ -305,14 +305,14 @@ public class BookServiceImplGetAllBooksTest {
         expectedBooks.add(new Book("B001", "Book1", "Author1", 100, 0));
         expectedBooks.add(new Book("B002", "Book2", "Author2", 200, 10));
         when(dbUtil.getConnection()).thenReturn(connection);
-        when(connection.prepareStatement(BooksDBConstants.getAllBooksQuery)).thenReturn(preparedStatement);
+        when(connection.prepareStatement(BooksDBConstants.GET_ALL_BOOKS_QUERY)).thenReturn(preparedStatement);
         when(preparedStatement.executeQuery()).thenReturn(resultSet);
         when(resultSet.next()).thenReturn(true, true, false);
-        when(resultSet.getString(1)).thenReturn("B001", "B002");
-        when(resultSet.getString(2)).thenReturn("Book1", "Book2");
-        when(resultSet.getString(3)).thenReturn("Author1", "Author2");
-        when(resultSet.getInt(4)).thenReturn(100, 200);
-        when(resultSet.getInt(5)).thenReturn(0, 10);
+        when(resultSet.getString("book_code")).thenReturn("B001", "B002");
+        when(resultSet.getString("book_name")).thenReturn("Book1", "Book2");
+        when(resultSet.getString("author")).thenReturn("Author1", "Author2");
+        when(resultSet.getInt("price")).thenReturn(100, 200);
+        when(resultSet.getInt("quantity")).thenReturn(0, 10);
         List<Book> actualBooks = bookService.getAllBooks();
         assertEquals(expectedBooks.size(), actualBooks.size());
         for (int i = 0; i < expectedBooks.size(); i++) {
@@ -330,14 +330,14 @@ public class BookServiceImplGetAllBooksTest {
         expectedBooks.add(new Book("B001", "Book1", "Author1", 100, -5));
         expectedBooks.add(new Book("B002", "Book2", "Author2", 200, 10));
         when(dbUtil.getConnection()).thenReturn(connection);
-        when(connection.prepareStatement(BooksDBConstants.getAllBooksQuery)).thenReturn(preparedStatement);
+        when(connection.prepareStatement(BooksDBConstants.GET_ALL_BOOKS_QUERY)).thenReturn(preparedStatement);
         when(preparedStatement.executeQuery()).thenReturn(resultSet);
         when(resultSet.next()).thenReturn(true, true, false);
-        when(resultSet.getString(1)).thenReturn("B001", "B002");
-        when(resultSet.getString(2)).thenReturn("Book1", "Book2");
-        when(resultSet.getString(3)).thenReturn("Author1", "Author2");
-        when(resultSet.getInt(4)).thenReturn(100, 200);
-        when(resultSet.getInt(5)).thenReturn(-5, 10);
+        when(resultSet.getString("book_code")).thenReturn("B001", "B002");
+        when(resultSet.getString("book_name")).thenReturn("Book1", "Book2");
+        when(resultSet.getString("author")).thenReturn("Author1", "Author2");
+        when(resultSet.getInt("price")).thenReturn(100, 200);
+        when(resultSet.getInt("quantity")).thenReturn(-5, 10);
         List<Book> actualBooks = bookService.getAllBooks();
         assertEquals(expectedBooks.size(), actualBooks.size());
         for (int i = 0; i < expectedBooks.size(); i++) {
@@ -355,14 +355,14 @@ public class BookServiceImplGetAllBooksTest {
         expectedBooks.add(new Book("B001", "Book1", "Author1", 1000000, 5));
         expectedBooks.add(new Book("B002", "Book2", "Author2", 2000000, 10));
         when(dbUtil.getConnection()).thenReturn(connection);
-        when(connection.prepareStatement(BooksDBConstants.getAllBooksQuery)).thenReturn(preparedStatement);
+        when(connection.prepareStatement(BooksDBConstants.GET_ALL_BOOKS_QUERY)).thenReturn(preparedStatement);
         when(preparedStatement.executeQuery()).thenReturn(resultSet);
         when(resultSet.next()).thenReturn(true, true, false);
-        when(resultSet.getString(1)).thenReturn("B001", "B002");
-        when(resultSet.getString(2)).thenReturn("Book1", "Book2");
-        when(resultSet.getString(3)).thenReturn("Author1", "Author2");
-        when(resultSet.getInt(4)).thenReturn(1000000, 2000000);
-        when(resultSet.getInt(5)).thenReturn(5, 10);
+        when(resultSet.getString("book_code")).thenReturn("B001", "B002");
+        when(resultSet.getString("book_name")).thenReturn("Book1", "Book2");
+        when(resultSet.getString("author")).thenReturn("Author1", "Author2");
+        when(resultSet.getInt("price")).thenReturn(1000000, 2000000);
+        when(resultSet.getInt("quantity")).thenReturn(5, 10);
         List<Book> actualBooks = bookService.getAllBooks();
         assertEquals(expectedBooks.size(), actualBooks.size());
         for (int i = 0; i < expectedBooks.size(); i++) {
@@ -380,14 +380,14 @@ public class BookServiceImplGetAllBooksTest {
         expectedBooks.add(new Book("B001", "Book1", "A very large author name that is longer than usual", 100, 5));
         expectedBooks.add(new Book("B002", "Book2", "Another very large author name that is even longer", 200, 10));
         when(dbUtil.getConnection()).thenReturn(connection);
-        when(connection.prepareStatement(BooksDBConstants.getAllBooksQuery)).thenReturn(preparedStatement);
+        when(connection.prepareStatement(BooksDBConstants.GET_ALL_BOOKS_QUERY)).thenReturn(preparedStatement);
         when(preparedStatement.executeQuery()).thenReturn(resultSet);
         when(resultSet.next()).thenReturn(true, true, false);
-        when(resultSet.getString(1)).thenReturn("B001", "B002");
-        when(resultSet.getString(2)).thenReturn("Book1", "Book2");
-        when(resultSet.getString(3)).thenReturn("A very large author name that is longer than usual", "Another very large author name that is even longer");
-        when(resultSet.getInt(4)).thenReturn(100, 200);
-        when(resultSet.getInt(5)).thenReturn(5, 10);
+        when(resultSet.getString("book_code")).thenReturn("B001", "B002");
+        when(resultSet.getString("book_name")).thenReturn("Book1", "Book2");
+        when(resultSet.getString("author")).thenReturn("A very large author name that is longer than usual", "Another very large author name that is even longer");
+        when(resultSet.getInt("price")).thenReturn(100, 200);
+        when(resultSet.getInt("quantity")).thenReturn(5, 10);
         List<Book> actualBooks = bookService.getAllBooks();
         assertEquals(expectedBooks.size(), actualBooks.size());
         for (int i = 0; i < expectedBooks.size(); i++) {
